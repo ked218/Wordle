@@ -60,8 +60,9 @@
     <Compile Include="Assets\Scripts\PuzzleState.cs" />
     <Compile Include="Assets\Scripts\GameFlowManager.cs" />
     <Compile Include="Assets\Scripts\WordReposity.cs" />
-    <Compile Include="Assets\Scripts\LetterState.cs" />
     <Compile Include="Assets\Scripts\Key.cs" />
+    <Compile Include="Assets\Scripts\LetterState.cs" />
+    <Compile Include="Assets\Ex\Ex.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Data\Words.txt" />
