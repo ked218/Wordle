@@ -134,14 +134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47041bf7d011b447a7233316ccc559c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_keyCode: 113
+  m_keyCode: 111
   m_letterStateColors:
   - LetterState: 0
-    Color: {r: 0.16368885, g: 0.9433962, b: 0.08365962, a: 0}
+    Color: {r: 0.16368885, g: 0.9433962, b: 0.08365962, a: 1}
   - LetterState: 1
-    Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 0}
+    Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   - LetterState: 2
-    Color: {r: 0.9618833, g: 1, b: 0, a: 0}
+    Color: {r: 0.9618833, g: 1, b: 0, a: 1}
 --- !u!1 &901409552942788439
 GameObject:
   m_ObjectHideFlags: 0

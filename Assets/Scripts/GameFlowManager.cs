@@ -87,6 +87,7 @@ public class GameFlowManager : MonoBehaviour
 
     void OnKeyPressed(KeyCode keyCode)
     {
+        Debug.Log("Is it work?");
         if(PuzzleState != PuzzleState.InProgress)
         {
             if (keyCode == KeyCode.Return)
