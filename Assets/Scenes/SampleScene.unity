@@ -837,7 +837,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Target
+  m_Text: Tar
 --- !u!222 &218677908
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3216,10 +3216,10 @@ RectTransform:
   m_Father: {fileID: 1896197173}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.25, y: -442.3268}
-  m_SizeDelta: {x: 310, y: 64.6536}
+  m_AnchoredPosition: {x: -0.25, y: -166.82681}
+  m_SizeDelta: {x: 310, y: -486.3464}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1121457382 stripped
 MonoBehaviour:
@@ -4241,7 +4241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Search
+  m_Text: Src
 --- !u!222 &1673309620
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4715,7 +4715,7 @@ GameObject:
   - component: {fileID: 1924707473}
   - component: {fileID: 1924707472}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Ads
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4737,9 +4737,9 @@ RectTransform:
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: 309, y: 50}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -250.5}
+  m_SizeDelta: {x: 310, y: -501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924707472
 MonoBehaviour:
