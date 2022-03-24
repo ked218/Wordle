@@ -33,9 +33,11 @@ public class GameFlowManager : MonoBehaviour
     [Tooltip("Keys on keyboard")]
     Key[] m_keys = null;
 
+    [SerializeField]
+    [Tooltip("Score Point")]
+    int score_point = 0;
 
-
-    List<Letter> m_letters = null;
+    List <Letter> m_letters = null;
     int m_index = 0;
     int m_currentRow = 0;
     char?[] m_guess = new char?[k_wordLength];
@@ -201,7 +203,7 @@ public class GameFlowManager : MonoBehaviour
         for(int i=0; i < k_wordLength; i++)
         {
             m_letters[(m_currentRow * k_wordLength) + i].Shake();
-        }
+        } 
     }
 
     public void GuessWord()
@@ -223,13 +225,17 @@ public class GameFlowManager : MonoBehaviour
                 {
                     bool correct = m_guess[i] == m_word[i];
 
+                    //Check letter in word if it have change color
                     if (!correct)
                     {
+                        //It is the correct word in data then check
                         incorrect = true;
-
+                        //It is still have in data
                         bool letterExistsInWord = false;
+                        //The loop check the letter in word
                         for(int j=0; j < k_wordLength; j++)
                         {
+                            //If the letter exist so assign it to the m_word[j]
                             letterExistsInWord = m_guess[i] == m_word[j];
                             if (letterExistsInWord)
                                 break;
@@ -245,6 +251,8 @@ public class GameFlowManager : MonoBehaviour
                     }
                 }
 
+
+                //If they guess 6 times and still wrong so the game will be end
                 if (incorrect)
                 {
                     m_index = 0;
@@ -254,8 +262,12 @@ public class GameFlowManager : MonoBehaviour
                         PuzzleState = PuzzleState.Failed;
                     }
                 }
+
+                //Or the game will be complete
                 else
                 {
+                    //If they have win the game will receive 6 point
+
                     PuzzleState = PuzzleState.Complete;
                 }
 
