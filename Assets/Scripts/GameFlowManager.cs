@@ -33,7 +33,9 @@ public class GameFlowManager : MonoBehaviour
     [Tooltip("Keys on keyboard")]
     Key[] m_keys = null;
 
-
+    [SerializeField]
+    [Tooltip("Score")]
+    int score_board = 0;
 
     List<Letter> m_letters = null;
     int m_index = 0;
@@ -251,12 +253,15 @@ public class GameFlowManager : MonoBehaviour
                     m_currentRow++;
                     if(m_currentRow >= m_amountOfRows)
                     {
+                        Debug.Log(" " + score_board);
                         PuzzleState = PuzzleState.Failed;
                     }
                 }
                 else
                 {
+                    
                     PuzzleState = PuzzleState.Complete;
+                    score_board = m_currentRow;
                 }
 
             }
