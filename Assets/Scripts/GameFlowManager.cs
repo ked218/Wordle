@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class GameFlowManager : MonoBehaviour
 {
@@ -32,8 +33,6 @@ public class GameFlowManager : MonoBehaviour
     [SerializeField]
     [Tooltip("Keys on keyboard")]
     Key[] m_keys = null;
-
-
 
     List<Letter> m_letters = null;
     int m_index = 0;
@@ -206,7 +205,7 @@ public class GameFlowManager : MonoBehaviour
 
     public void GuessWord()
     {
-        if(m_index != k_wordLength)
+        if (m_index != k_wordLength)
         {
             Shake();
         }
@@ -234,7 +233,7 @@ public class GameFlowManager : MonoBehaviour
                             if (letterExistsInWord)
                                 break;
                         }
-
+                        
                         StartCoroutine(PlayLetter(i * m_letterAnimationOffsetTime, (m_currentRow * k_wordLength) + i, letterExistsInWord ? LetterState.WrongLocation : LetterState.Incorrect));
 
                     }
@@ -249,7 +248,7 @@ public class GameFlowManager : MonoBehaviour
                 {
                     m_index = 0;
                     m_currentRow++;
-                    if(m_currentRow >= m_amountOfRows)
+                    if (m_currentRow >= m_amountOfRows)
                     {
                         PuzzleState = PuzzleState.Failed;
                     }
@@ -258,6 +257,7 @@ public class GameFlowManager : MonoBehaviour
                 {
                     PuzzleState = PuzzleState.Complete;
                 }
+
 
             }
         }
