@@ -2,36 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using UnityEngine.UIElements;
 
 public class CoinsManager : MonoBehaviour
 {
     public CoinsSO coinsSO;
 
-    public PuzzleState PuzzleState { get; private set; } = PuzzleState.InProgress;
+    public PuzzleState PuzzleState;
 
     ////This string will appear in the name of the player prefs
     //public String KEY_SAVE_COINS = "KEY_SAVE_COINS";
-
-    int m_currentRow = 0;
 
     public void Update()
     {
         ////Using key code to test
         if (Input.GetKey(KeyCode.Space))
             EarnCoin(20);
-
         //if (Input.GetKey(KeyCode.R))
         //    UseCoin(1);
 
 
         //When it complete so just plus the coins with the points
-        if (PuzzleState == PuzzleState.Failed)
+        if(PuzzleState == PuzzleState.Complete)
         {
-            UseCoin(100);
+            Debug.Log("Hi there!");
         }
-
-
 
     }
 

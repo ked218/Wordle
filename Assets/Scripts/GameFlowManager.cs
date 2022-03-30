@@ -40,6 +40,9 @@ public class GameFlowManager : MonoBehaviour
     char?[] m_guess = new char?[k_wordLength];
     char[] m_word = new char[k_wordLength];
 
+    public CoinsSO coinsSO;
+
+
     public PuzzleState PuzzleState { get; private set; } = PuzzleState.InProgress;
 
     public Action Restarted;

@@ -20,12 +20,12 @@ public class WordReposity : MonoBehaviour
     {
         m_words = new List<string>(m_wordList.text.Split(new char[] { ',', ' ', '\n', '\r' }, System.StringSplitOptions.RemoveEmptyEntries));
 
-        //m_wordsCheck = new List<string>(m_wordLevel.text.Split(new char[] { ',', ' ', '\n', '\r' }, System.StringSplitOptions.RemoveEmptyEntries));
+        m_wordsCheck = new List<string>(m_wordLevel.text.Split(new char[] { ',', ' ', '\n', '\r' }, System.StringSplitOptions.RemoveEmptyEntries));
     }
 
     public string GetRandomWord()
     {
-        return m_words[Random.Range(0, m_words.Count)];
+        return m_wordsCheck[Random.Range(0, m_wordsCheck.Count)];
     }
 
     public bool CheckWordExists(string word)
